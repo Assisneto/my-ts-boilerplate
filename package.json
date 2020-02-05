@@ -1,0 +1,39 @@
+{
+  "name": "pet-helper-backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Assisneto Damasceno",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "build": "sucrase ./src -d ./dist --transforms typescript,imports",
+    "lint": "eslint \"src/*.ts\" \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/*.ts\" \"src/**/*.ts\" --fix",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.1",
+    "@types/node": "^13.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "faker": "^4.1.0",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "sucrase": "^3.12.1",
+    "supertest": "^4.0.2",
+    "ts-jest": "^25.2.0",
+    "typescript": "^3.7.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint:fix"
+    }
+  }
+}
