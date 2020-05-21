@@ -5,8 +5,8 @@
   "author": "Assisneto Damasceno",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.ts",
-    "build": "sucrase ./src -d ./dist --transforms typescript,imports",
+    "dev": "ts-node-dev --transpileOnly --ignore-watch node_modules src/server.ts",
+    "build": "tsc",
     "lint": "eslint \"src/*.ts\" \"src/**/*.ts\"",
     "lint:fix": "eslint \"src/*.ts\" \"src/**/*.ts\" --fix",
     "test": "jest"
@@ -26,9 +26,9 @@
     "jest": "^26.0.1",
     "nodemon": "^2.0.2",
     "prettier": "^2.0.5",
-    "sucrase": "^3.12.1",
     "supertest": "^4.0.2",
     "ts-jest": "^26.0.0",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.7.5"
   },
   "husky": {
