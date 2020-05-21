@@ -12,8 +12,8 @@ module.exports = {
     node: true,
     jest: true,
   },
-  plugins: ['@typescript-eslint'],
-  extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'airbnb-base'],
+  plugins: ['@typescript-eslint','prettier'],
+  extends: ['plugin:@typescript-eslint/recommended', 'prettier/@typescript-eslint', 'airbnb-base','plugin:prettier/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -24,6 +24,7 @@ module.exports = {
   },
   rules: {
     semi: 'off',
+    'prettier/prettier':['error'],
     '@typescript-eslint/semi': ['error'],
     'import/prefer-default-export': 'off',
     'import/no-unresolved': ['error', { ignore: ['^@'] }],
